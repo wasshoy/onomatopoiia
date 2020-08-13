@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Lemon&family=Open+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap');
+
+$theme-color: #f7d94c;
+$text-color: #0e1428;
+$bg-color: #fefefe;
+$second-color: #d95d39;
+
+@mixin sp {
+  @media (max-width: ($sp)) {
+    @content;
+  }
+}
+* {
+  font-family: 'Open Sans', 'M PLUS 1p', cursive;
+}
+body {
+  background-color: $bg-color;
+  color: $text-color;
+  font-size: 18px;
+}
+
+.header {
+  background-color: $theme-color;
+  display: flex;
+  justify-content: space-between;
+  height: 48px;
+  &__title {
+    font-family: 'Lemon', cursive;
+    font-size: 32px;
+    line-height: 48px;
+    margin: 0 24px;
+  }
+  &__nav ul {
+    display: flex;
+    justify-content: space-around;
+    height: 48px;
+    margin-right: 24px;
+    li {
+      color: $bg-color;
+      font-size: 16px;
+      display: inline-block;
+      line-height: 46px;
+      text-align: center;
+      transition: border-bottom 0.23s;
+      width: 80px;
+      &:hover {
+        border-bottom: solid 2px $text-color;
+      }
+    }
+  }
+}
+
+.main {
+  border: 1px solid green; /* TODO: 最後に削除 */
+  margin: 0 auto;
+  max-width: 640px;
+  min-width: 320px;
+}
+
+.footer {
+  background-color: $text-color;
+  color: $bg-color;
+  font-size: 12px;
+  height: 60px;
+  &__abouts {
+    height: 30px;
+    width: 360px;
+    margin: 0 auto;
+    ul {
+      display: flex;
+      justify-content: center;
+      li {
+        display: inline-block;
+        line-height: 30px;
+        text-align: center;
+        transition: opacity 0.2s;
+        width: 120px;
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+  &__copyright {
+    line-height: 30px;
+    text-align: center;
+  }
+}

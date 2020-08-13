@@ -1,0 +1,26 @@
+$theme-color: #f7d94c;
+$text-color: #0e1428;
+$bg-color: #fefefe;
+$second-color: #d95d39;
+
+.main {
+  &__top {
+    &__first-view {
+      background-color: $second-color;
+      border: 2px solid blue; /* TODO: 最後に削除 */
+      color: $bg-color;
+      font-size: 28px;
+      height: 320px;
+      display: grid;
+      place-items: center;
+      margin-bottom: 20px;
+    }
+    &__latest-answers {
+      border: 2px solid blue; /* TODO: 最後に削除 */
+      &__title {
+        font-size: 24px;
+        font-weight: bold;
+      }
+    }
+  }
+}
