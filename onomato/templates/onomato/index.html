@@ -1,0 +1,12 @@
+
+
+{% if latest_answer %}
+    <ul>
+    {% for answer in latest_answer %}
+        <p>お題：{{ answer.odai.odai_text }}</p>
+        ==> <a href="/onomato/{{ answer.id }}/">{{ answer.answer_text }}</a>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No answers are available.</p>
+{% endif %}
