@@ -1,0 +1,5 @@
+<h3>{{odai.odai_text}}</h3>
+{% comment %} {{odai.pub_date}} {% endcomment %}
+{%for q in odai.answer_set.all%}
+  <p>{{q.answer_text}}</p>
+{%endfor%}
