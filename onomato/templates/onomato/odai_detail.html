@@ -1,0 +1,9 @@
+{% extends 'onomato/base.html' %}
+{% load static %}
+{% block link %}{% endblock %}
+{% block content %}
+  <h3>{{odai.odai_text}}</h3>
+{% for q in odai.answer_set.all %}
+  <p>{{q.answer_text}}</p>
+{% endfor %}
+{% endblock %}

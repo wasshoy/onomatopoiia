@@ -1,3 +1,5 @@
 from django.contrib import admin
+from .models import Odai, Answer
 
-# Register your models here.
+admin.site.register(Odai)
+admin.site.register(Answer)

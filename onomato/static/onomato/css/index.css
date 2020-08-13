@@ -1,0 +1,22 @@
+@charset "UTF-8";
+.main__top__first-view {
+  background-color: #d95d39;
+  border: 2px solid blue;
+  /* TODO: 最後に削除 */
+  color: #fefefe;
+  font-size: 28px;
+  height: 320px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 20px;
+}
+.main__top__latest-answers {
+  border: 2px solid blue;
+  /* TODO: 最後に削除 */
+}
+.main__top__latest-answers__title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/*# sourceMappingURL=index.css.map */
