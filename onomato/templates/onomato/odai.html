@@ -1,0 +1,13 @@
+{% extends 'onomato/base.html' %}
+{% load static %}
+{% block link %}{% endblock %}
+{% block content %}
+  <h3>{{odai.odai_text}}</h3>
+  {% if latest_odai %}
+    {% for odai in latest_odai %}
+      <a href="/onomato/odai/{{ odai.id }}"/><p>{{odai.odai_text}}</p></a>
+  {% endfor %}
+  {% else %}
+    <p>お題はまだ無いよ。</p>
+  {% endif %}
+{% endblock %}

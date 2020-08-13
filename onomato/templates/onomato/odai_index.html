@@ -1,9 +1,0 @@
-{% if latest_odai %}
-    <ul>
-    {% for odai in latest_odai %}
-        <p>お題：<a href="/onomato/odai/{{ odai.id }}/">{{ odai.odai_text }}</a></p>
-    {% endfor %}
-    </ul>
-{% else %}
-    <p>No odais are available.</p>
-{% endif %}
