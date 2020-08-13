@@ -1,13 +1,23 @@
 {% extends 'onomato/base.html' %}
-{% load static %}
-{% block link %}{% endblock %}
+{% load static %} 
+{% block link %}
+<link rel="stylesheet" href="{% static 'onomato/css/odai.css' %}" />
+{% endblock %}
 {% block content %}
-  <h3>{{odai.odai_text}}</h3>
+<div class="main__odais">
   {% if latest_odai %}
-    {% for odai in latest_odai %}
-      <a href="/onomato/odai/{{ odai.id }}"/><p>{{odai.odai_text}}</p></a>
-  {% endfor %}
-  {% else %}
-    <p>お題はまだ無いよ。</p>
+  <h2 class="main__odais__title">最新のお題</h2>
+  {% for odai in latest_odai %}
+  <div class="main__odais__odai">
+    <p class="main__odais__odai__text">{{odai.odai_text}}</p>
+    <div class="main__odais__detail-link">
+      <a href="/onomato/odai/{{ odai.id }}">
+        回答を見る・回答する
+      </a>
+    </div>
+  </div>
+  {% endfor %} {% else %}
+  <p>お題はまだ無いよ。</p>
   {% endif %}
+</div>
 {% endblock %}

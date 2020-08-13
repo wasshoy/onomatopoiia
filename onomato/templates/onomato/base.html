@@ -5,27 +5,26 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="{% static 'onomato/css/reset.css' %}"/>
-    <link rel="stylesheet" href="{% static 'onomato/css/base.css' %}"/>
+    <link rel="stylesheet" href="{% static 'onomato/css/reset.css' %}" />
+    <link rel="stylesheet" href="{% static 'onomato/css/base.css' %}" />
     {% block link %}{% endblock %}
-    <link rel="stylesheet" href="{% static 'onomato/css/about.css' %}"/>
+    <link rel="stylesheet" href="{% static 'onomato/css/about.css' %}" />
     <title>onomatopoiia</title>
   </head>
   <body>
     <header class="header">
       <h1>
-        <a href="#" class="header__title">onomatopoiia</a>
+        <a href="/onomato/" class="header__title">onomatopoiia</a>
       </h1>
       <nav class="header__nav">
         <ul>
-          <a href="#"><li>お題</li></a>
+          <a href="/onomato/odai/"><li>お題</li></a>
           <a href="#"><li>ログイン</li></a>
         </ul>
       </nav>
     </header>
     <main class="main">
-      {% block content %}
-      {% endblock %}
+      {% block content %} {% endblock %}
     </main>
     <footer class="footer">
       <div class="footer__abouts">

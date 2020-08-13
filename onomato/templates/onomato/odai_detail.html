@@ -1,9 +1,16 @@
-{% extends 'onomato/base.html' %}
-{% load static %}
-{% block link %}{% endblock %}
-{% block content %}
-  <h3>{{odai.odai_text}}</h3>
-{% for q in odai.answer_set.all %}
-  <p>{{q.answer_text}}</p>
-{% endfor %}
+{% extends 'onomato/base.html' %} {% load static %} {% block link %}
+<link rel="stylesheet" href="{% static 'onomato/css/odai_detail.css' %}" />
+{% endblock %} {% block content %}
+<div class="main__kaitou">
+  <div class="main__kaitou__odai">
+    <h2 class="main__kaitou__odai-text">{{odai.odai_text}}</h2>
+  </div>
+  <div class="main__kaitou__kaitous">
+    {% for q in odai.answer_set.all %}
+    <div class="main__kaitou__kaitous__kaitou">
+      <p>{{q.answer_text}}</p>
+    </div>
+    {% endfor %}
+  </div>
+</div>
 {% endblock %}
