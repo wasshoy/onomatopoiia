@@ -1,4 +1,5 @@
-{% extends 'onomato/base.html' %} {% load static %} {% block link %}
+<<<<<<< HEAD {% extends 'onomato/base.html' %} {% load static %} {% block link
+%}
 <link rel="stylesheet" href="{% static 'onomato/css/odai_detail.css' %}" />
 {% endblock %} {% block content %}
 <div class="main__kaitou">
@@ -12,5 +13,9 @@
     </div>
     {% endfor %}
   </div>
+  <form method="post">
+    {% csrf_token %} {{ form.as_p }}
+    <input type="submit" value="Save" />
+  </form>
 </div>
 {% endblock %}
