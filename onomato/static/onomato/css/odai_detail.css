@@ -50,6 +50,8 @@
 }
 .main__kaitou__kaitous__kaitou {
   background-color: #f7d94c;
+  border-radius: 2px;
+  box-shadow: 0 2px 1px 0 #0e142855;
   display: grid;
   font-weight: 800;
   margin: 18px 0;
@@ -57,12 +59,30 @@
   height: 50px;
 }
 .main__kaitou__no-kaitou-message {
-  background-color: #5ab5b244;
+  background-color: #b8d8d8;
   display: grid;
   height: 100px;
   margin: 18px 0;
   padding: 16px 0;
   place-items: center;
+}
+.main__kaitou__links {
+  display: flex;
+}
+.main__kaitou__links__odai-link {
+  background-color: #f4cc1a;
+  border: 1px solid #0e142855;
+  border-radius: 2px;
+  color: #fefefe;
+  display: block;
+  margin: 18px auto;
+  padding: 2px 8px;
+  text-align: center;
+  transition: background-color 0.2s;
+  width: 140px;
+}
+.main__kaitou__links__odai-link:hover {
+  background-color: #d95d39;
 }
 
 /*# sourceMappingURL=odai_detail.css.map */

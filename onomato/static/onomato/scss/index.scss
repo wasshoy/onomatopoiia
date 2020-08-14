@@ -2,11 +2,19 @@ $theme-color: #f7d94c;
 $text-color: #0e1428;
 $bg-color: #fefefe;
 $second-color: #d95d39;
+$darker-second-color: #b74424;
+
+$sp: 480px; // smart phone width
+
+@font-face {
+  font-family: 'Koharuiro';
+  src: url('../fonts/GN-Koharuiro_Sunray.ttf');
+}
 
 .main {
   &__top {
     &__first-view {
-      background-color: $second-color;
+      background-color: #b8d8d8;
       color: $bg-color;
       font-size: 28px;
       height: 320px;
@@ -15,15 +23,70 @@ $second-color: #d95d39;
       margin-bottom: 20px;
     }
     &__top-nav {
-      // border: 2px solid blue; /* TODO: デプロイ前に削除 */
+      background-color: $second-color;
+      border: 1px solid #0e142855;
+      border-radius: 2px;
+      color: $bg-color;
+      display: grid;
+      font-size: 28px;
+      place-items: center;
+      height: 100px;
       margin-bottom: 20px;
+      transition: background-color 0.2s;
+      &:hover {
+        background-color: $darker-second-color;
+      }
     }
     &__latest-answers {
-      // border: 2px solid blue; /* TODO: デプロイ前に削除 */
       &__title {
         font-size: 24px;
         font-weight: bold;
       }
+      &__answer {
+        background: $theme-color;
+        box-shadow: 0 2px 1px 0 #0e142855;
+        display: flex;
+        justify-content: space-between;
+        height: 100px;
+        margin: 18px 0;
+        &__odai-answer {
+          padding: 8px 16px;
+          width: calc(100% - 100px);
+          &__odai-text {
+            font-family: 'Koharuiro';
+            font-size: 36px;
+          }
+          &__answer-text {
+            font-size: 24px;
+            font-weight: bold;
+            margin: 0 auto;
+            text-align: center;
+          }
+        }
+        &__detail-link {
+          border-left: 1px solid $text-color;
+          color: $bg-color;
+          display: grid;
+          place-items: center;
+          transition: background-color 0.2s, color 0.2s;
+          width: 100px;
+          &:hover {
+            background-color: $second-color;
+          }
+        }
+      }
     }
+  }
+}
+
+@media (max-width: 640px) {
+  .main__top__latest-answers__answer__odai-answer__answer-text {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: $sp) {
+  .main__top__latest-answers__answer__odai-answer__answer-text {
+    font-size: 14px;
   }
 }

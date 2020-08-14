@@ -1,0 +1,34 @@
+.main__policy__title {
+  border-left: 8px solid #f7d94c;
+  display: inline-block;
+  font-size: 28px;
+  font-weight: 600;
+  margin: 18px 0 8px 0;
+  padding: 4px 8px;
+}
+.main__policy__text {
+  margin: 0 0 18px 16px;
+}
+.main__policy__item__subtitle {
+  border-left: 8px solid #d95d39;
+  display: inline-block;
+  font-size: 28px;
+  font-weight: 600;
+  margin: 18px 0 8px 0;
+  padding: 4px 8px;
+  font-size: 18px;
+  font-weight: 500;
+  margin: 18px 0 8px 0;
+}
+.main__policy__item__text {
+  list-style-type: decimal;
+  margin: 0 36px;
+}
+.main__policy__item__text > li {
+  margin-bottom: 8px;
+}
+.main__policy__item__text > li ul > li {
+  margin: 4px 0;
+}
+
+/*# sourceMappingURL=tos.css.map */

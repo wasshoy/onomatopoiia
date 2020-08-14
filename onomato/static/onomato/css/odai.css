@@ -14,26 +14,25 @@
   height: 100px;
   justify-content: space-between;
   margin: 18px 0;
-  padding: 8px 16px;
 }
 .main__odais__odai__text {
   font-family: "Koharuiro";
   font-size: 58px;
   height: 80px;
   line-height: 86px;
+  padding: 8px 16px;
 }
-.main__odais__detail-link {
-  line-height: 80px;
-}
-.main__odais__detail-link a {
+.main__odais__odai__detail-link {
   background-color: #f7d94c;
-  border: 1px solid #0e142855;
-  border-radius: 2px;
-  padding: 2px 8px;
-  transition: background-color 0.2s;
+  border-left: 1px solid #0e1428;
+  color: #fefefe;
+  display: grid;
+  place-items: center;
+  transition: background-color 0.2s, color 0.2s;
+  width: 100px;
 }
-.main__odais__detail-link a:hover {
-  background-color: #f4cc1a;
+.main__odais__odai__detail-link:hover {
+  background-color: #d95d39;
 }
 
 /*# sourceMappingURL=odai.css.map */

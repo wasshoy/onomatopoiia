@@ -7,14 +7,37 @@
       未だ知らぬオノマトペを開拓しよう！
     </p>
   </div>
-  <div class="main__top__top-nav">
-    [TBW] : お題一覧へのナビゲーション
-  </div>
+  <a href="/onomato/odai/" class="main__top__top-nav">全てのお題を見る </a>
+  <a href="/onomato/odai/" class="main__top__top-nav">ランダムにお題を選ぶ </a>
   <div class="main__top__latest-answers">
     <h2 class="main__top__latest-answers__title">最新の回答</h2>
+    {% if latest_answer %} {% for answer in latest_answer %}
     <div class="main__top__latest-answers__answer">
-      [TBW]
+      <div class="main__top__latest-answers__answer__odai-answer">
+        <p class="main__top__latest-answers__answer__odai-answer__odai-text">
+          {{ answer.odai.odai_text }}
+        </p>
+        <div
+          class="main__top__latest-answers__answer__odai-answer__answer-text"
+        >
+          {{ answer.answer_text }}
+        </div>
+      </div>
+      <a
+        href="/onomato/odai/{{ answer.odai.id }}"
+        class="main__top__latest-answers__answer__detail-link"
+      >
+        <div>
+          <div class="main__top__latest-answers__answer__detail-link__text">
+            回答を見る
+          </div>
+          <div class="main__top__latest-answers__answer__detail-link__text">
+            回答する
+          </div>
+        </div>
+      </a>
     </div>
+    {% endfor %} {% else %} {% endif %}
   </div>
 </div>
 {% endblock %}

@@ -1,7 +1,12 @@
-{% extends 'onomato/base.html' %} {% load static %} {% block content %}
+{% extends 'onomato/base.html' %}
+{% load static %}
+{% block link %}
+<link rel="stylesheet" href="{% static 'onomato/css/about.css' %}" />
+{% endblock %}
+{% block content %}
 <div class="main__abouts">
   <ul class="main__abouts__list">
-    <li class="main__abouts__concept" id="main__abouts__concept">
+    <li class="main__abouts__concept main__abouts__list__item" id="main__abouts__concept">
       <h2 class="main__abouts__title">
         onomatopoiia へようこそ！
       </h2>
@@ -12,7 +17,7 @@
         </p>
       </div>
     </li>
-    <li class="main__abouts__onomatopee" id="main__abouts__onomatopee">
+    <li class="main__abouts__onomatopee main__abouts__list__item" id="main__abouts__onomatopee">
       <h2 class="main__abouts__title">
         オノマトペ とは？
       </h2>
@@ -25,14 +30,29 @@
         </p>
       </div>
     </li>
-    <li class="main__abouts__asobikata" id="main__abouts__asobikata">
+    <li class="main__abouts__asobikata main__abouts__list__item" id="main__abouts__asobikata">
       <h2 class="main__abouts__title">遊び方</h2>
-      <p>
-        お題となるオノマトペに20文字以内で概念を書いて遊びましょう。<br />
-        「どういう風に答えるのか分からない」という人は、<br />
-        他の人の回答を見て感覚を掴みましょう。<br />
-        思いつきで書いたものが案外しっくり来たりするかも...！？
-      </p>
+      <div class="main__abouts__text">
+        <p>
+          お題となるオノマトペに20文字以内で概念を書いて遊びましょう。<br />
+          オノマトペ例 : パチパチ
+          <ul>
+            <li>概念例 1 : 線香花火の様子</li>
+            <li>概念例 2 : 電気の流れる音</li>
+            <li>概念例 3 : 電気の流れる音</li>
+          </ul>
+          「どういう風に答えるのか分からない」という人は、<br />
+          他の人の回答を見て感覚を掴みましょう。<br />
+          思いつきで書いたものが案外しっくり来たりするかも...！？
+
+        <p>※ お願い</p>
+          下ネタや誹謗中傷（他人を傷つける）ような内容は書かないようにしてください。<br>
+          内容によっては削除させていただく場合があります。
+        </p>
+        <a href="/onomato/odai/" class="main__abouts__asobikata__odai-link">
+          お題を見てみる
+        </a>
+      </div>
     </li>
 
     <li class="main__abouts__contact" id="main__abouts__contact"></li>

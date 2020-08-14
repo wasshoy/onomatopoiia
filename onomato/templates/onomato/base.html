@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="{% static 'onomato/css/reset.css' %}" />
     <link rel="stylesheet" href="{% static 'onomato/css/base.css' %}" />
     {% block link %}{% endblock %}
-    <link rel="stylesheet" href="{% static 'onomato/css/about.css' %}" />
     <title>onomatopoiia</title>
   </head>
   <body>
@@ -17,9 +16,13 @@
         <a href="/onomato/" class="header__title">onomatopoiia</a>
       </h1>
       <nav class="header__nav">
-        <ul>
-          <a href="/onomato/odai/"><li>お題</li></a>
-          <a href="#"><li>ログイン</li></a>
+        <ul class="header__nav__list">
+          <a href="/onomato/odai/"
+            ><li class="header__nav__list__item">お題</li></a
+          >
+          <a href="#" class="header__nav__list__item login"
+            ><li>ログイン</li></a
+          >
         </ul>
       </nav>
     </header>
@@ -31,9 +34,7 @@
         <ul>
           <a href="/onomato/about/"><li>このサイトについて</li></a>
           <a href="/onomato/tos/"><li>利用規約等</li></a>
-          <a href="/onomato/about#main__abouts__contact"
-            ><li>お問い合わせ</li></a
-          >
+          <a href="/onomato/contact/"><li>お問い合わせ</li></a>
         </ul>
       </div>
       <div class="footer__copyright">
@@ -46,5 +47,6 @@
   <script>
     // Chrome の読み込み時の transition が効くのを防ぐための空コード
   </script>
+  <script src="{% static 'onomato/js/base.js' %}"></script>
   {% block script %} {% endblock %}
 </html>

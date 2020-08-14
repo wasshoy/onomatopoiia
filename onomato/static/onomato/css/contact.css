@@ -1,0 +1,21 @@
+.main__contact {
+  height: 100px;
+}
+.main__contact__title {
+  border-left: 8px solid #f7d94c;
+  display: inline-block;
+  font-size: 28px;
+  font-weight: 600;
+  margin: 18px 0 8px 0;
+  padding: 4px 8px;
+}
+.main__contact__content__list {
+  list-style-type: disc;
+  margin: 18px 0 18px 16px;
+}
+.main__contact__address-image {
+  display: block;
+  margin: 18px auto 0;
+}
+
+/*# sourceMappingURL=contact.css.map */

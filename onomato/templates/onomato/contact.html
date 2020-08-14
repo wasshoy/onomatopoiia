@@ -1,0 +1,22 @@
+{% extends 'onomato/base.html' %} {% load static %} {% block link %}
+<link rel="stylesheet" href="{% static 'onomato/css/contact.css' %}" />
+{% endblock %} {% block content %}
+<div class="main__contact">
+  <h2 class="main__contact__title">お問い合わせ</h2>
+  <div class="main__contact__content">
+    <p>お問い合わせフォームは現在作成途中です。</p>
+    <ul class="main__contact__content__list">
+      <li>お名前</li>
+      <li>件名</li>
+      <li>内容</li>
+    </ul>
+    <p>を記載して、以下の画像のe-mailアドレス宛にメールをご送信ください。</p>
+    <img
+      class="main__contact__address-image"
+      src="{% static 'onomato/img/address-mini.jpg' %}"
+      alt="メールアドレス画像"
+      width="200"
+    />
+  </div>
+</div>
+{% endblock %}

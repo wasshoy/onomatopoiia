@@ -1,5 +1,9 @@
+@font-face {
+  font-family: "Koharuiro";
+  src: url("../fonts/GN-Koharuiro_Sunray.ttf");
+}
 .main__top__first-view {
-  background-color: #d95d39;
+  background-color: #b8d8d8;
   color: #fefefe;
   font-size: 28px;
   height: 320px;
@@ -8,11 +12,67 @@
   margin-bottom: 20px;
 }
 .main__top__top-nav {
+  background-color: #d95d39;
+  border: 1px solid #0e142855;
+  border-radius: 2px;
+  color: #fefefe;
+  display: grid;
+  font-size: 28px;
+  place-items: center;
+  height: 100px;
   margin-bottom: 20px;
+  transition: background-color 0.2s;
+}
+.main__top__top-nav:hover {
+  background-color: #b74424;
 }
 .main__top__latest-answers__title {
   font-size: 24px;
   font-weight: bold;
+}
+.main__top__latest-answers__answer {
+  background: #f7d94c;
+  box-shadow: 0 2px 1px 0 #0e142855;
+  display: flex;
+  justify-content: space-between;
+  height: 100px;
+  margin: 18px 0;
+}
+.main__top__latest-answers__answer__odai-answer {
+  padding: 8px 16px;
+  width: calc(100% - 100px);
+}
+.main__top__latest-answers__answer__odai-answer__odai-text {
+  font-family: "Koharuiro";
+  font-size: 36px;
+}
+.main__top__latest-answers__answer__odai-answer__answer-text {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0 auto;
+  text-align: center;
+}
+.main__top__latest-answers__answer__detail-link {
+  border-left: 1px solid #0e1428;
+  color: #fefefe;
+  display: grid;
+  place-items: center;
+  transition: background-color 0.2s, color 0.2s;
+  width: 100px;
+}
+.main__top__latest-answers__answer__detail-link:hover {
+  background-color: #d95d39;
+}
+
+@media (max-width: 640px) {
+  .main__top__latest-answers__answer__odai-answer__answer-text {
+    font-size: 20px;
+  }
+}
+@media (max-width: 480px) {
+  .main__top__latest-answers__answer__odai-answer__answer-text {
+    font-size: 14px;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */

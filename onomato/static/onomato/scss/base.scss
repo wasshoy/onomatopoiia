@@ -3,9 +3,11 @@
 @import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap');
 
 $theme-color: #f7d94c;
+$darker-theme-color: #f4cc1a;
 $text-color: #0e1428;
 $bg-color: #fefefe;
 $second-color: #d95d39;
+$darker-second-color: #b74424;
 
 // レスポンシブ設定
 @mixin sp {
@@ -34,29 +36,36 @@ body {
     line-height: 48px;
     margin: 0 24px;
   }
-  &__nav ul {
+  &__nav__list {
     display: flex;
     justify-content: space-around;
     height: 48px;
     margin-right: 24px;
-    li {
+    &__item {
       color: $bg-color;
+      display: inline-block;
       font-size: 16px;
       display: inline-block;
-      line-height: 46px;
+      line-height: 48px;
+      height: 48px;
       text-align: center;
-      transition: color 0.2s;
+      transition: background-color 0.2s;
       width: 80px;
       &:hover {
-        color: $text-color;
-        // border-bottom: solid 2px $text-color;  /* TODO: かっこよくないので、かっこよくする */
+        background-color: $darker-theme-color;
+      }
+      &.login {
+        background-color: $second-color;
+        &:hover {
+          background: $darker-second-color;
+        }
       }
     }
   }
 }
 
 .main {
-  border: 1px solid green; /* TODO: 最後に削除 */
+  // border: 1px solid green; /* TODO: 最後に削除 */
   margin: 0 auto;
   min-height: 100vh;
   max-width: 640px;
