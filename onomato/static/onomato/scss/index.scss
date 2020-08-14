@@ -7,7 +7,6 @@ $second-color: #d95d39;
   &__top {
     &__first-view {
       background-color: $second-color;
-      border: 2px solid blue; /* TODO: 最後に削除 */
       color: $bg-color;
       font-size: 28px;
       height: 320px;
@@ -15,8 +14,12 @@ $second-color: #d95d39;
       place-items: center;
       margin-bottom: 20px;
     }
+    &__top-nav {
+      // border: 2px solid blue; /* TODO: デプロイ前に削除 */
+      margin-bottom: 20px;
+    }
     &__latest-answers {
-      border: 2px solid blue; /* TODO: 最後に削除 */
+      // border: 2px solid blue; /* TODO: デプロイ前に削除 */
       &__title {
         font-size: 24px;
         font-weight: bold;

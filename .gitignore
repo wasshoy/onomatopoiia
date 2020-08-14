@@ -1,8 +1,9 @@
 .DS_Store
-__pycache__/
+__pycache__
 
-*.css.map
 .sass-cache
-scss/
+*.css.map
+*.scss
 
 taihi
+# ↑ これなに？コメントほしい

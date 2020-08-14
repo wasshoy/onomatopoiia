@@ -29,9 +29,11 @@
     <footer class="footer">
       <div class="footer__abouts">
         <ul>
-          <a href="#"><li>onomatopoiiaとは</li></a>
-          <a href="#"><li>利用規約</li></a>
-          <a href="#"><li>お問い合わせ</li></a>
+          <a href="/onomato/about/"><li>このサイトについて</li></a>
+          <a href="/onomato/tos/"><li>利用規約等</li></a>
+          <a href="/onomato/about#main__abouts__contact"
+            ><li>お問い合わせ</li></a
+          >
         </ul>
       </div>
       <div class="footer__copyright">
@@ -41,4 +43,8 @@
       </div>
     </footer>
   </body>
+  <script>
+    // Chrome の読み込み時の transition が効くのを防ぐための空コード
+  </script>
+  {% block script %} {% endblock %}
 </html>

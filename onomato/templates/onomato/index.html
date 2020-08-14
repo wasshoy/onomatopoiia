@@ -1,21 +1,20 @@
-{% extends 'onomato/base.html' %}
-{% load static %}
-{% block link %}
-      <link rel="stylesheet" href="{% static 'onomato/css/index.css' %}"/>
-{% endblock %}
-{% block content %}
-      <div class="main__top">
-        <div class="main__top__first-view">
-          <p>
-            未だ知らぬオノマトペを開拓しよう！
-          </p>
-        </div>
-        <div class="main__top__latest-answers">
-          <h2 class="main__top__latest-answers__title">最新の回答</h2>
-          <div class="main__top__latest-answers__answer">
-          [TBW]
-          </div>
-    
-        </div>
-      </div>
+{% extends 'onomato/base.html' %} {% load static %} {% block link %}
+<link rel="stylesheet" href="{% static 'onomato/css/index.css' %}" />
+{% endblock %} {% block content %}
+<div class="main__top">
+  <div class="main__top__first-view">
+    <p>
+      未だ知らぬオノマトペを開拓しよう！
+    </p>
+  </div>
+  <div class="main__top__top-nav">
+    [TBW] : お題一覧へのナビゲーション
+  </div>
+  <div class="main__top__latest-answers">
+    <h2 class="main__top__latest-answers__title">最新の回答</h2>
+    <div class="main__top__latest-answers__answer">
+      [TBW]
+    </div>
+  </div>
+</div>
 {% endblock %}

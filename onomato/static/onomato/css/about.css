@@ -1,3 +1,16 @@
-
+.main__abouts__title {
+  border-left: 8px solid #d95d39;
+  display: inline-block;
+  font-size: 28px;
+  font-weight: 600;
+  margin: 18px 0 8px 0;
+  padding: 4px 8px;
+}
+.main__abouts__text {
+  margin: 8px 0;
+}
+.main__abouts p {
+  line-height: 32px;
+}
 
 /*# sourceMappingURL=about.css.map */

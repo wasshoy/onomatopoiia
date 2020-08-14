@@ -1,56 +1,41 @@
-<!-- {% load static %} -->
-<!-- {% extends 'onomato/base.html' %} -->
-<!DOCTYPE html>
-<html lang="ja">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!-- TODO : テスト用の記述  テンプレートに書き換えるときに削除 -->
-    <link rel="stylesheet" href="css/reset.css" />
-    <link rel="stylesheet" href="css/base.css" />
-    <link rel="stylesheet" href="css/about.css" />
-
-    <!-- ここまで -->
-    <title>onomatopoiia</title>
-  </head>
-  <body>
-    <header class="header">
-      <h1>
-        <a href="#" class="header__title">onomatopoiia</a>
-      </h1>
-      <nav class="header__nav">
-        <ul>
-          <a href="#"><li>お題</li></a>
-          <a href="#"><li>ログイン</li></a>
-        </ul>
-      </nav>
-    </header>
-    <main class="main">
-      <div class="main__abouts">
-          <div class="main__abouts__concept">
-            onomatopoiia へようこそ！
-            <p>
-              onomatopoiia（オノマトポイーア）は未知のオノマトペにしっくりくる、「ぽい」説明をみんなで考える大喜利系サイトです。
-            </p>
-          </div>
-          <div class="main__abouts__onomatopee"></div>
-          <div class="main__abouts__policy"></div>
-          <div class="main__abouts__contact"></div>
-    </main>
-    <footer class="footer">
-      <div class="footer__abouts">
-        <ul>
-          <a href="#"><li>onomatopoiiaとは</li></a>
-          <a href="#"><li>利用規約</li></a>
-          <a href="#"><li>お問い合わせ</li></a>
-        </ul>
-      </div>
-      <div class="footer__copyright">
+{% extends 'onomato/base.html' %} {% load static %} {% block content %}
+<div class="main__abouts">
+  <ul class="main__abouts__list">
+    <li class="main__abouts__concept" id="main__abouts__concept">
+      <h2 class="main__abouts__title">
+        onomatopoiia へようこそ！
+      </h2>
+      <div class="main__abouts__text">
         <p>
-          (c) 2020 onomatopoiia
+          onomatopoiia（オノマトポイーア）は未知のオノマトペにしっくりくる、<br />
+          「ぽい」説明や概念をみんなで考えるゆるふわ大喜利系サイトです。
         </p>
       </div>
-    </footer>
-  </body>
-</html>
+    </li>
+    <li class="main__abouts__onomatopee" id="main__abouts__onomatopee">
+      <h2 class="main__abouts__title">
+        オノマトペ とは？
+      </h2>
+      <div class="main__abouts__text">
+        <p>
+          オノマトペ（onomatopoeia, onomatopee）は<br />
+          「ワンワン」「パチパチ」「ワクワク」などの、
+          擬声語や擬音語、擬態語を<br />
+          指す言葉です。 （元来の意味は擬声語のみらしいです。）
+        </p>
+      </div>
+    </li>
+    <li class="main__abouts__asobikata" id="main__abouts__asobikata">
+      <h2 class="main__abouts__title">遊び方</h2>
+      <p>
+        お題となるオノマトペに20文字以内で概念を書いて遊びましょう。<br />
+        「どういう風に答えるのか分からない」という人は、<br />
+        他の人の回答を見て感覚を掴みましょう。<br />
+        思いつきで書いたものが案外しっくり来たりするかも...！？
+      </p>
+    </li>
+
+    <li class="main__abouts__contact" id="main__abouts__contact"></li>
+  </ul>
+</div>
+{% endblock %}

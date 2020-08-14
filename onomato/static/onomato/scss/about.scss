@@ -1,0 +1,23 @@
+$theme-color: #f7d94c;
+$text-color: #0e1428;
+$bg-color: #fefefe;
+$second-color: #d95d39;
+
+.main {
+  &__abouts {
+    &__title {
+      border-left: 8px solid $second-color;
+      display: inline-block;
+      font-size: 28px;
+      font-weight: 600;
+      margin: 18px 0 8px 0;
+      padding: 4px 8px;
+    }
+    &__text {
+      margin: 8px 0;
+    }
+    p {
+      line-height: 32px;
+    }
+  }
+}

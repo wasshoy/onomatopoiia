@@ -1,21 +1,38 @@
-<<<<<<< HEAD {% extends 'onomato/base.html' %} {% load static %} {% block link
-%}
+{% extends 'onomato/base.html' %} {% load static %} {% block link %}
 <link rel="stylesheet" href="{% static 'onomato/css/odai_detail.css' %}" />
 {% endblock %} {% block content %}
 <div class="main__kaitou">
   <div class="main__kaitou__odai">
-    <h2 class="main__kaitou__odai-text">{{odai.odai_text}}</h2>
+    <h2 class="main__kaitou__odai-text">{{ odai.odai_text }}</h2>
   </div>
+  {% comment %} {% if not form %}
+  <p>受け取ったformが空！</p>
+  {% endif %} {% endcomment %}
+  <form method="post" class="main__kaitou__form">
+    {% csrf_token %}
+    <label for="answer-text">これはなに？</label>
+    <input
+      type="text"
+      id="answer-text"
+      name="answer-text"
+      placeholder="20文字まで"
+      maxlength="20"
+      required
+      autofocus
+    />
+    <input type="submit" value="送信" class="main__kaitou__form__submit" />
+  </form>
   <div class="main__kaitou__kaitous">
-    {% for q in odai.answer_set.all %}
+    {% if odai.answer_set.all %} {% for q in odai.answer_set.all %}
     <div class="main__kaitou__kaitous__kaitou">
       <p>{{q.answer_text}}</p>
     </div>
-    {% endfor %}
+    {% endfor %} {% else %}
+    <div class="main__kaitou__no-kaitou-message">
+      <p>まだ概念がありません。</p>
+      <p>あなたが第一人者になろう！</p>
+    </div>
+    {% endif %}
   </div>
-  <form method="post">
-    {% csrf_token %} {{ form.as_p }}
-    <input type="submit" value="Save" />
-  </form>
 </div>
 {% endblock %}

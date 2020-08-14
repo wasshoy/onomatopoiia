@@ -1,6 +1,38 @@
+@charset "UTF-8";
 @font-face {
   font-family: "Koharuiro";
   src: url("../fonts/GN-Koharuiro_Sunray.ttf");
+}
+.main__kaitou__form {
+  display: flex;
+  justify-content: space-between;
+}
+.main__kaitou__form label {
+  line-height: 32px;
+  margin-left: 16px;
+}
+.main__kaitou__form input[type=text] {
+  background-color: #fdf9e6;
+  border-radius: 2px;
+  padding: 4px 8px;
+  height: 32px;
+  width: 380px;
+}
+.main__kaitou__form input[type=text]:focus {
+  box-shadow: 0 0 2px 0 #0e1428;
+}
+.main__kaitou__form input[type=submit] {
+  background-color: #d95d39;
+  color: #fefefe;
+  border-radius: 2px;
+  height: 32px;
+  margin-right: 16px;
+  padding: 4px 8px;
+  transition: background-color 0.2s;
+}
+.main__kaitou__form input[type=submit]:hover {
+  background-color: #b74424;
+  /* 少し暗く */
 }
 .main__kaitou__odai {
   border: 1px solid #0e1428;
@@ -19,9 +51,18 @@
 .main__kaitou__kaitous__kaitou {
   background-color: #f7d94c;
   display: grid;
+  font-weight: 800;
   margin: 18px 0;
   place-items: center;
   height: 50px;
+}
+.main__kaitou__no-kaitou-message {
+  background-color: #5ab5b244;
+  display: grid;
+  height: 100px;
+  margin: 18px 0;
+  padding: 16px 0;
+  place-items: center;
 }
 
 /*# sourceMappingURL=odai_detail.css.map */
