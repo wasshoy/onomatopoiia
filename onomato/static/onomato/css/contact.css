@@ -9,9 +9,12 @@
   margin: 18px 0 8px 0;
   padding: 4px 8px;
 }
+.main__contact__content {
+  margin: 0 0 8px 16px;
+}
 .main__contact__content__list {
   list-style-type: disc;
-  margin: 18px 0 18px 16px;
+  margin: 18px 0 18px 24px;
 }
 .main__contact__address-image {
   display: block;
