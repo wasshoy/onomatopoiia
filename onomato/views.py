@@ -6,7 +6,7 @@ from .forms import AnswerForm
 
 
 def index(request):
-    latest_answer = Answer.objects.order_by('-pub_date')[:3]
+    latest_answer = Answer.objects.order_by('-pub_date')[:5]
     context = {
         'latest_answer': latest_answer,
     }
@@ -25,6 +25,10 @@ def about(request):
 
 def tos(request):
     return render(request, 'onomato/tos.html')
+
+
+def contact(request):
+    return render(request, 'onomato/contact.html')
 
 
 def odai_detail(request, odai_id):
