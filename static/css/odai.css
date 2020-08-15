@@ -35,4 +35,10 @@
   background-color: #d95d39;
 }
 
+@media (max-width: 375px) {
+  .main__odais__title {
+    font-size: 20px;
+  }
+}
+
 /*# sourceMappingURL=odai.css.map */

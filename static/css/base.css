@@ -136,4 +136,27 @@ body {
   text-align: center;
 }
 
+@media (max-width: 375px) {
+  body {
+    font-size: 12px;
+  }
+
+  .header {
+    width: 100vw;
+  }
+  .header__title {
+    margin: 0 8px;
+    display: block;
+    font-size: 12px;
+    width: 45px;
+  }
+  .header__nav__list__item {
+    font-size: 12px;
+  }
+
+  .main {
+    padding: 0 12px;
+  }
+}
+
 /*# sourceMappingURL=base.css.map */

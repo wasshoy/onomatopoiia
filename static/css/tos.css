@@ -31,4 +31,10 @@
   margin: 4px 0;
 }
 
+@media (max-width: 375px) {
+  .main__policy__title {
+    font-size: 20px;
+  }
+}
+
 /*# sourceMappingURL=tos.css.map */

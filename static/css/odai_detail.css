@@ -133,4 +133,13 @@
   background-color: #fefefe;
 }
 
+@media (max-width: 375px) {
+  .main__kaitou__not-login__text {
+    font-size: 8px;
+  }
+  .main__kaitou__not-login__login-link, .main__kaitou__not-login__signup-link {
+    width: 80px;
+  }
+}
+
 /*# sourceMappingURL=odai_detail.css.map */

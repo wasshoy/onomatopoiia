@@ -14,9 +14,9 @@
   <body>
     <header class="header">
       <h1>
-        <a href="{% url 'onomato:index' %}" class="header__title"
-          >onomatopoiia</a
-        >
+        <a href="{% url 'onomato:index' %}" class="header__title">
+          onomatopoiia
+        </a>
       </h1>
       <nav class="header__nav">
         <ul class="header__nav__list">
@@ -29,7 +29,7 @@
               {{ request.user.username | truncatechars:7 }}
             </p>
             <ul class="user__user-menu hidden" id="user-menu">
-              <a href="#">
+              <a href="{% url 'accounts:user' %}">
                 <li class="user-menu__item">マイページ</li>
               </a>
               <a href="{% url 'logout' %}">

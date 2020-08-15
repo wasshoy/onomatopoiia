@@ -89,5 +89,17 @@
     font-size: 14px;
   }
 }
+@media (max-width: 375px) {
+  .main__top__first-view {
+    font-size: 20px;
+    height: 240px;
+  }
+  .main__top__navs__item {
+    font-size: 10px;
+  }
+  .main__top__latest-answers__title {
+    font-size: 20px;
+  }
+}
 
 /*# sourceMappingURL=index.css.map */

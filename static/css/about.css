@@ -30,4 +30,10 @@
   background-color: #d95d39;
 }
 
+@media (max-width: 375px) {
+  .main__abouts__title {
+    font-size: 20px;
+  }
+}
+
 /*# sourceMappingURL=about.css.map */

@@ -21,4 +21,10 @@
   margin: 18px auto 0;
 }
 
+@media (max-width: 375px) {
+  .main__contact__title {
+    font-size: 20px;
+  }
+}
+
 /*# sourceMappingURL=contact.css.map */
