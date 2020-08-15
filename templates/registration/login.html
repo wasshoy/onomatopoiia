@@ -1,28 +1,53 @@
-{% extends "base.html" %} {% block content %} {% if form.errors %}
-<p>Your username and password didn't match. Please try again.</p>
-{% endif %} {% if next %} {% if user.is_authenticated %}
+{% extends "base.html" %} 
+{% load static %}
+{% block link %}
+<link rel="stylesheet" href="{% static '/css/login.css' %}" />
+{% endblock %} 
+{% block content %} 
+{% if next %} 
+{% if user.is_authenticated %}
 <p>
-  Your account doesn't have access to this page. To proceed, please login with
-  an account that has access.
+  既にログイン済みです。
 </p>
 {% else %}
 <p>Please login to see this page.</p>
-{% endif %} {% endif %}
+{% endif %}
+{% endif %}
 
-<form method="post">
-  {% csrf_token %}
-  <table>
-    <tr>
-      <td>{{ form.username.label_tag }}</td>
-      <td>{{ form.username }}</td>
-    </tr>
-    <tr>
-      <td>{{ form.password.label_tag }}</td>
-      <td>{{ form.password }}</td>
-    </tr>
-  </table>
-
-  <input type="submit" value="login" />
-  <input type="hidden" name="next" value="{{ next }}" />
-</form>
+<div class="main__login">
+  <form action="" method="post" class="main__login__form">
+    <h1 class="main__login__form__title">ログイン</h1>
+    {% csrf_token %}
+    <div class="main__login__form__error-message">
+        {{ form.non_field_erros }}
+      </div>
+      <div class="main__login__form__item">
+        <label for="{{ form.username.id_for_label }}" class="main__login__form__item__label">
+          ユーザー名
+        </label>
+          <div class="main__login__form__item__field">
+          	{{ form.username }}
+          </div>
+          <div class="main__login__form__item__error">
+              {{ form.username.errors }}
+          </div>
+      </div>
+      <div class="main__login__form__item">
+        <label for="{{ form.password.id_for_label }}" class="main__login__form__item__label">
+          パスワード
+        </label>
+          <div class="main__login__form__item__field">
+              {{ form.password }}
+          </div>
+          <div class="main__login__form__item__error">
+              {{ form.password.errors }}
+          </div>
+          {% if form.errors %}
+            <p class="main__login__form__item__error">ユーザー名とパスワードが一致しません。</p>
+          {% endif %}
+      </div>
+    <input type="submit" value="ログイン"  class="main__login__form__item__submit" />
+    <input type="hidden" name="next" value="{{ next }}" />
+  </form>
+</div>
 {% endblock %}
