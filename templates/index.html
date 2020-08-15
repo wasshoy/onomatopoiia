@@ -1,5 +1,5 @@
 {% extends 'onomato/base.html' %} {% load static %} {% block link %}
-<link rel="stylesheet" href="{% static 'onomato/css/index.css' %}" />
+<link rel="stylesheet" href="{% static '/css/index.css' %}" />
 {% endblock %} {% block content %}
 <div class="main__top">
   <div class="main__top__first-view">
@@ -7,9 +7,15 @@
       未だ知らぬオノマトペを開拓しよう！
     </p>
   </div>
-  <a href="/onomato/about/" class="main__top__top-nav">遊び方 </a>
-  <a href="/onomato/odai/" class="main__top__top-nav">全てのお題を見る </a>
-  <a href="/onomato/odai/" class="main__top__top-nav">ランダムにお題を選ぶ </a>
+  <div class="main__top__navs">
+    <a href="{% url 'onomato:about' %}" class="main__top__navs__item">遊び方</a>
+    <a href="{% url 'onomato:odai_index' %}" class="main__top__navs__item">
+      お題一覧
+    </a>
+    <a href="#" class="main__top__navs__item">
+      ランダムお題
+    </a>
+  </div>
   <div class="main__top__latest-answers">
     <h2 class="main__top__latest-answers__title">最新の回答</h2>
     {% if latest_answer %} {% for answer in latest_answer %}
@@ -24,8 +30,9 @@
           {{ answer.answer_text }}
         </div>
       </div>
+      {% comment %} HACK: href がハードコーディングなので url を使って書き換える {% endcomment %}
       <a
-        href="/onomato/odai/{{ answer.odai.id }}"
+        href="odai/{{ answer.odai.id }}"
         class="main__top__latest-answers__answer__detail-link"
       >
         <div>

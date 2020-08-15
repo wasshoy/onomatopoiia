@@ -11,20 +11,25 @@
   place-items: center;
   margin-bottom: 20px;
 }
-.main__top__top-nav {
-  background-color: #d95d39;
+.main__top__navs {
+  display: flex;
+  justify-content: center;
+  margin: 0 16px;
+}
+.main__top__navs__item {
+  background-color: #fefefe;
   border: 1px solid #0e142855;
   border-radius: 2px;
-  color: #fefefe;
   display: grid;
-  font-size: 28px;
+  font-size: 16px;
   place-items: center;
   height: 100px;
-  margin-bottom: 20px;
+  margin: 0 16px 20px 16px;
   transition: background-color 0.2s;
+  width: 110px;
 }
-.main__top__top-nav:hover {
-  background-color: #b74424;
+.main__top__navs__item:hover {
+  background-color: #f7d94c;
 }
 .main__top__latest-answers__title {
   font-size: 24px;
@@ -54,7 +59,7 @@
   text-align: center;
 }
 .main__top__latest-answers__answer__detail-link {
-  border-left: 1px solid #0e1428;
+  border-left: 1px solid #0e142855;
   color: #fefefe;
   display: grid;
   place-items: center;

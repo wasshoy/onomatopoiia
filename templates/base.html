@@ -1,0 +1,76 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="{% static '/css/reset.css' %}" />
+    <link rel="stylesheet" href="{% static '/css/base.css' %}" />
+    {% block link %}{% endblock %}
+    <title>onomatopoiia</title>
+  </head>
+  <body>
+    <header class="header">
+      <h1>
+        <a href="{% url 'onomato:index' %}" class="header__title"
+          >onomatopoiia</a
+        >
+      </h1>
+      <nav class="header__nav">
+        <ul class="header__nav__list">
+          <a href="{% url 'onomato:odai_index' %}">
+            <li class="header__nav__list__item">お題</li>
+          </a>
+          {% if request.user.is_authenticated %}
+          <li class="header__nav__list__item user" id="user-tab">
+            <p class="user__text">
+              {{ request.user.username | truncatechars:7 }}
+            </p>
+            <ul class="user__user-menu hidden" id="user-menu">
+              <a href="#">
+                <li class="user-menu__item">マイページ</li>
+              </a>
+              <a href="{% url 'logout' %}">
+                <li class="user-menu__item">ログアウト</li>
+              </a>
+            </ul>
+          </li>
+          {% else %}
+          <a href="{% url 'login' %}" class="header__nav__list__item login">
+            <li>ログイン</li>
+          </a>
+          <a
+            href="{% url 'accounts:signup' %}"
+            class="header__nav__list__item signup"
+          >
+            <li>新規登録</li>
+          </a>
+          {% endif %}
+        </ul>
+      </nav>
+    </header>
+    <main class="main">
+      {% block content %} {% endblock %}
+    </main>
+    <footer class="footer">
+      <div class="footer__abouts">
+        <ul>
+          <a href="{% url 'onomato:about' %}"><li>このサイトについて</li></a>
+          <a href="{% url 'onomato:tos' %}"><li>利用規約等</li></a>
+          <a href="{% url 'onomato:contact' %}"><li>お問い合わせ</li></a>
+        </ul>
+      </div>
+      <div class="footer__copyright">
+        <p>
+          (c) 2020 onomatopoiia
+        </p>
+      </div>
+    </footer>
+  </body>
+  <script>
+    // Chrome の読み込み時の transition が効くのを防ぐための空コード
+  </script>
+  <script src="{% static 'onomato/js/base.js' %}"></script>
+  {% block script %} {% endblock %}
+</html>
