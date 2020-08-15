@@ -1,11 +1,14 @@
 'use strict';
 {
-  // ヘッダーのユーザー名をクリックするとメニューが出現
+  // ログイン時のヘッダーのユーザー名をクリックするとメニューが出現
   const userMenu = document.getElementById('user-menu');
-  const userTab = document.getElementById('user-tab');
-  userTab.addEventListener('click', () => {
-    userMenu.classList.toggle('hidden');
-  });
+  try {
+    const userTab = document.getElementById('user-tab');
+    console.log(userTab);
+    userTab.addEventListener('click', () => {
+      userMenu.classList.toggle('hidden');
+    });
+  } catch {}
 
   // Message to Developers.
   const styles1 =
