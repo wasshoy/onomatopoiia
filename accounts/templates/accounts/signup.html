@@ -1,6 +1,9 @@
-{% extends 'base.html' %} {% load static %} {% block link %}
+{% extends 'base.html' %}
+{% load static %}
+{% block link %}
 <link rel="stylesheet" href="{% static '/css/signup.css' %}" />
-{% endblock %} {% block content %}
+{% endblock %} 
+{% block content %}
 <div class="main__signup">
 <form action="" class="main__signup__form" method="POST">
   <h1 class="main__signup__form__title">新規登録</h1>
@@ -43,12 +46,5 @@
     </div>
           <input type="submit" value="登録" class="main__signup__form__item__submit"></input>
   </form>
-
-  {% comment %} <section class="common-form">
-    <form method="post">
-      {% csrf_token %} {{ form.as_p }}
-      <button type="submit" class="submit">Sign up</button>
-    </form>
-  </section> {% endcomment %}
 </div>
 {% endblock %}
