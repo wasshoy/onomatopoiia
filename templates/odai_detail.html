@@ -6,7 +6,7 @@
     <h2 class="main__kaitou__odai-text">{{ odai.odai_text }}</h2>
   </div>
   {% if is_login %}
-  <form method="POST" class="main__kaitou__form">
+  <form action="" method="POST" class="main__kaitou__form">
     {% csrf_token %}
     <label for="answer_text">これはなに？</label>
     <input
