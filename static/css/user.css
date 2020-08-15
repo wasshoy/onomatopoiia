@@ -1,0 +1,9 @@
+.main__user {
+  background-color: #b8d8d8;
+  display: grid;
+  font-weight: bold;
+  height: 240px;
+  place-items: center;
+}
+
+/*# sourceMappingURL=user.css.map */

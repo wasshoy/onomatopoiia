@@ -1,0 +1,9 @@
+{% extends 'base.html' %} {% load static %} {% block link %}
+<link rel="stylesheet" href="{% static '/css/user.css' %}" />
+{% endblock %} {% block content %}
+<div class="main__user">
+  <div class="main__user__username">
+    <p>こんにちは、{{ user }}さん！</p>
+  </div>
+</div>
+{% endblock %}
