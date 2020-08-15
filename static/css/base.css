@@ -68,8 +68,11 @@ body {
   background-color: #eee;
 }
 .header__nav__list__item.user .user__user-menu {
+  backdrop-filter: blur(28px);
+  -webkit-backdrop-filter: blur(28px);
   border-radius: 0 0 2px 2px;
   font-size: 12px;
+  font-weight: bold;
   height: 64px;
   left: 0;
   position: absolute;
