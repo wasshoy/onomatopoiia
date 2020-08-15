@@ -1,4 +1,4 @@
-{% extends 'onomato/base.html' %} {% load static %} {% block link %}
+{% extends 'base.html' %} {% load static %} {% block link %}
 <link rel="stylesheet" href="{% static '/css/index.css' %}" />
 {% endblock %} {% block content %}
 <div class="main__top">
@@ -30,7 +30,8 @@
           {{ answer.answer_text }}
         </div>
       </div>
-      {% comment %} HACK: href がハードコーディングなので url を使って書き換える {% endcomment %}
+      {% comment %} HACK: href がハードコーディングなので url を使って書き換える
+      {% endcomment %}
       <a
         href="odai/{{ answer.odai.id }}"
         class="main__top__latest-answers__answer__detail-link"
