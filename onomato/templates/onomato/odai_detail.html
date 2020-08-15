@@ -5,20 +5,16 @@
   <div class="main__kaitou__odai">
     <h2 class="main__kaitou__odai-text">{{ odai.odai_text }}</h2>
   </div>
-  {% comment %} {% if not form %}
-  <p>受け取ったformが空！</p>
-  {% endif %} {% endcomment %}
-  <form method="post" class="main__kaitou__form">
+
+  <form method="POST" class="main__kaitou__form">
     {% csrf_token %}
-    <label for="answer-text">これはなに？</label>
+    <label for="answer_text">これはなに？</label>
     <input
       type="text"
-      id="answer-text"
-      name="answer-text"
+      name="answer_text"
       placeholder="20文字まで"
       maxlength="20"
       required
-      autofocus
     />
     <input type="submit" value="送信" class="main__kaitou__form__submit" />
   </form>

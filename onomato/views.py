@@ -35,6 +35,7 @@ def odai_detail(request, odai_id):
     odai = Odai.objects.get(id=odai_id)
     if request.method == 'POST':
         form = AnswerForm(request.POST)
+        print(form.is_valid())
         if form.is_valid():
             answer = form.save(commit=False)  # フォームの内容を保存
             # フォームで入力された値以外を埋める
@@ -44,11 +45,17 @@ def odai_detail(request, odai_id):
             # TODO: url の指定がハードコーディングなため、修正の必要がある
             # return redirect('odai_detail', {'odai_id': odai_id})   # この書き方だとエラー
             return redirect(f'/onomato/odai/{odai_id}')
+        else:
+            form = AnswerForm()
+            context = {'odai': odai, 'form': form}
+            return render(request, 'onomato/odai_detail.html', context)
+
     else:
         context = {'odai': odai}
         return render(request, 'onomato/odai_detail.html', context)
 
 
+# TODO: フォームテスト用。消す。
 def answer_forms(request):
     print('forms のビュー')
     form = AnswerForm(request.GET or None)

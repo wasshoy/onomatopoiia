@@ -6,6 +6,7 @@ class AnswerForm(forms.ModelForm):
     class Meta:
         model = Answer
         fields = ('answer_text',)
+        labels = {'answer_text': 'これはなに？'}
 
 
 # ↓ 岩崎くんのコード。一旦コメントアウト。

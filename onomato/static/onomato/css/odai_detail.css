@@ -70,7 +70,7 @@
   display: flex;
 }
 .main__kaitou__links__odai-link {
-  background-color: #f4cc1a;
+  background-color: #f7d94c;
   border: 1px solid #0e142855;
   border-radius: 2px;
   color: #fefefe;
@@ -82,7 +82,7 @@
   width: 140px;
 }
 .main__kaitou__links__odai-link:hover {
-  background-color: #d95d39;
+  background-color: #f4cc1a;
 }
 
 /*# sourceMappingURL=odai_detail.css.map */
