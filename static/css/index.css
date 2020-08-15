@@ -31,6 +31,15 @@
 .main__top__navs__item:hover {
   background-color: #f7d94c;
 }
+.main__top__navs__item.disabled {
+  background-color: #fefefe;
+  color: #eee;
+  cursor: default;
+  transition: none;
+}
+.main__top__navs__item.disabled:hover {
+  background-color: #fefefe;
+}
 .main__top__latest-answers__title {
   font-size: 24px;
   font-weight: bold;

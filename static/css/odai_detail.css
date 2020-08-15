@@ -123,5 +123,14 @@
 .main__kaitou__links__odai-link:hover {
   background-color: #f4cc1a;
 }
+.main__kaitou__links__odai-link.disabled {
+  background-color: #fefefe;
+  color: #eee;
+  cursor: default;
+  transition: none;
+}
+.main__kaitou__links__odai-link.disabled:hover {
+  background-color: #fefefe;
+}
 
 /*# sourceMappingURL=odai_detail.css.map */
