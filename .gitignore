@@ -1,7 +1,10 @@
 .DS_Store
-__pycache__
+.vscode
+__pycache__/
+
 _templates
 _static
+local_settings.py
 
 .sass-cache
 *.css.map
