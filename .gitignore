@@ -5,6 +5,7 @@ __pycache__/
 _templates
 _static
 local_settings.py
+db.sqlite3
 
 .sass-cache
 *.css.map
