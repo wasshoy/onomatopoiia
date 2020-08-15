@@ -1,9 +1,10 @@
 .DS_Store
 __pycache__
+_templates
+_static
 
 .sass-cache
 *.css.map
 *.scss
 
 taihi
-# ↑ これなに？コメントほしい

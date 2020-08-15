@@ -1,8 +1,0 @@
-{% block content %}
-<h1>Add page</h1>
-<form action="{% url 'onomato:create_answer' %}" method="POST">
- {% csrf_token %}
- {{ form.as_p }}
- <button type="submit">投稿する</button>
-</form>
-{% endblock %}

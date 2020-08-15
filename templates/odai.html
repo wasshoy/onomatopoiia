@@ -1,5 +1,5 @@
-{% extends 'onomato/base.html' %} {% load static %} {% block link %}
-<link rel="stylesheet" href="{% static 'onomato/css/odai.css' %}" />
+{% extends 'base.html' %} {% load static %} {% block link %}
+<link rel="stylesheet" href="{% static '/css/odai.css' %}" />
 {% endblock %} {% block content %}
 <div class="main__odais">
   {% if latest_odai %}
@@ -9,10 +9,8 @@
     <div class="main__odais__odai__text">
       {{ odai.odai_text }}
     </div>
-    <a
-      href="/onomato/odai/{{ odai.id }}"
-      class="main__odais__odai__detail-link"
-    >
+    {% comment %} HACK: href を url を使って書く {% endcomment %}
+    <a href="/odai/{{ odai.id }}" class="main__odais__odai__detail-link">
       <div>
         <div class="main__odais__odai__detail-link__text">
           回答を見る
@@ -24,7 +22,7 @@
     </a>
   </div>
   {% endfor %} {% else %}
-  <p>お題はまだ無いよ。</p>
+  <p>お題はまだありません。</p>
   {% endif %}
 </div>
 {% endblock %}

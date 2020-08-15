@@ -1,7 +1,20 @@
-@charset "UTF-8";
 @font-face {
   font-family: "Koharuiro";
   src: url("../fonts/GN-Koharuiro_Sunray.ttf");
+}
+.main__kaitou__odai {
+  border: 1px solid #0e1428;
+  box-shadow: 0 2px 1px 0 #0e142855;
+  display: grid;
+  margin: 18px 0;
+  place-items: center;
+  height: 100px;
+}
+.main__kaitou__odai-text {
+  font-family: "Koharuiro";
+  font-size: 64px;
+  font-weight: bold;
+  margin: 18px 0;
 }
 .main__kaitou__form {
   display: flex;
@@ -32,21 +45,45 @@
 }
 .main__kaitou__form input[type=submit]:hover {
   background-color: #b74424;
-  /* 少し暗く */
 }
-.main__kaitou__odai {
-  border: 1px solid #0e1428;
-  box-shadow: 0 2px 1px 0 #0e142855;
-  display: grid;
-  margin: 18px 0;
-  place-items: center;
-  height: 100px;
+.main__kaitou__not-login {
+  display: flex;
+  justify-content: space-between;
+  margin: 18px 16px 18px 16px;
 }
-.main__kaitou__odai-text {
-  font-family: "Koharuiro";
-  font-size: 64px;
-  font-weight: bold;
-  margin: 18px 0;
+.main__kaitou__not-login__text {
+  line-height: 36px;
+}
+.main__kaitou__not-login__signup-link {
+  background-color: #d95d39;
+  border: 1px solid #0e142855;
+  border-radius: 2px;
+  color: #fefefe;
+  display: block;
+  line-height: 32px;
+  height: 40px;
+  padding: 2px 8px;
+  text-align: center;
+  transition: background-color 0.2s;
+  width: 140px;
+}
+.main__kaitou__not-login__signup-link:hover {
+  background-color: #b74424;
+}
+.main__kaitou__not-login__login-link {
+  background-color: #fefefe;
+  border: 1px solid #0e142855;
+  border-radius: 2px;
+  display: block;
+  height: 40px;
+  line-height: 32px;
+  padding: 2px 8px;
+  text-align: center;
+  transition: background-color 0.2s;
+  width: 140px;
+}
+.main__kaitou__not-login__login-link:hover {
+  background-color: #eee;
 }
 .main__kaitou__kaitous__kaitou {
   background-color: #f7d94c;
@@ -75,6 +112,8 @@
   border-radius: 2px;
   color: #fefefe;
   display: block;
+  height: 40px;
+  line-height: 32px;
   margin: 18px auto;
   padding: 2px 8px;
   text-align: center;

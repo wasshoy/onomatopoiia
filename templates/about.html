@@ -1,7 +1,7 @@
-{% extends 'onomato/base.html' %}
+{% extends 'base.html' %}
 {% load static %}
 {% block link %}
-<link rel="stylesheet" href="{% static 'onomato/css/about.css' %}" />
+<link rel="stylesheet" href="{% static '/css/about.css' %}" />
 {% endblock %}
 {% block content %}
 <div class="main__abouts">
@@ -13,7 +13,7 @@
       <div class="main__abouts__text">
         <p>
           onomatopoiia（オノマトポイーア）は未知のオノマトペにしっくりくる、<br />
-          「ぽい」説明や概念をみんなで考えるゆるふわ大喜利系サイトです。
+          <strong>「ぽい」</strong>説明や概念をみんなで考えるゆるふわ大喜利系サイトです。
         </p>
       </div>
     </li>
@@ -34,22 +34,22 @@
       <h2 class="main__abouts__title">遊び方</h2>
       <div class="main__abouts__text">
         <p>
-          お題となるオノマトペに<strong>20文字以内</strong>で概念を書いて遊びましょう。<br />
-          お題例 : パチパチ
+          お題となるオノマトペに<strong>20文字以内</strong>で概念を回答して遊びましょう。<br />
+          <p>お題例 : パチパチ</p>
           <ul>
             <li>回答例 1 : 線香花火の様子</li>
             <li>回答例 2 : 電気の流れる音</li>
             <li>回答例 3 : 賭け事に勤しむ様子</li>
           </ul>
-          「どういう風に答えるのか分からない」という人は、<br />
+          「どういう風に答えるのか分からない」「思いつかない」という人は、<br />
           他の人の回答を見て感覚を掴むのもアリだと思います。<br />
           思いつきで書いたものが案外しっくり来たりするかも...！？
 
         <p>※ お願い</p>
           下ネタや誹謗中傷（他人を傷つける）を含む内容は書かないようにしてください。<br>
-          削除させていただく場合があります。
+          回答を削除させていただく場合があります。
         </p>
-        <a href="/onomato/odai/" class="main__abouts__asobikata__odai-link">
+        <a href="{% url 'onomato:odai_index' %}" class="main__abouts__asobikata__odai-link">
           お題を見てみる
         </a>
       </div>
