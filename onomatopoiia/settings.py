@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'onomato',
+    'auth_user',
+    'social_django',
 ]
 
 MIDDLEWARE = [
@@ -63,6 +65,8 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'social_django.context_processors.backends',
+                'social_django.context_processors.login_redirect',
             ],
         },
     },
@@ -119,3 +123,16 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+AUTHENTICATION_BACKENDS = [
+     'social_core.backends.twitter.TwitterOAuth',
+     'django.contrib.auth.backends.ModelBackend',
+]
+
+SOCIAL_AUTH_TWITTER_KEY = 'vpSykIkyyUjeALB2Sdtgs6CrX' # Consumer Key (API Key)
+SOCIAL_AUTH_TWITTER_SECRET = 'm6GchNaRffHM39lYs5ZbqgEOreer2LXOc76UYH49F7qkMMLf5u' # Consumer Secret (API Secret)+
+SOCIAL_AUTH_LOGIN_REDIRECT_URL = '/user/top' # リダイレクトURL
+
+# リダイレクト先を変更する
+# twitter API上のコールバック先を変更する
+# 環境変数
