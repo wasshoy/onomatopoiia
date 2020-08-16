@@ -2,6 +2,9 @@
   font-family: "Koharuiro";
   src: url("../fonts/GN-Koharuiro_Sunray.ttf");
 }
+.main {
+  overflow: hidden;
+}
 .main__top__first-view {
   background-color: #b8d8d8;
   color: #fefefe;
@@ -13,13 +16,21 @@
   margin-bottom: 20px;
 }
 .main__top__first-view__catch-copy {
-  filter: drop-shadow(0 0 18px #efefef);
+  filter: drop-shadow(0 0 5px #efefef);
+  line-height: 320px;
+  margin: 0 auto;
+  text-align: center;
+  z-index: 10;
+}
+.main__top__first-view__catch-copy.english {
+  display: inline-block;
+  font-family: "Lemon";
+  font-size: 14px;
   left: 50%;
   position: absolute;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 480px;
-  z-index: 10;
+  top: 60%;
+  transform: translate(-53%, -50%);
+  z-index: 11;
 }
 .main__top__first-view__text {
   display: block;
@@ -245,12 +256,27 @@
   }
 }
 @media (max-width: 375px) {
+  .main {
+    overflow: hidden;
+  }
   .main__top__first-view {
-    font-size: 20px;
     height: 240px;
+  }
+  .main__top__first-view__catch-copy {
+    font-size: 20px;
+    line-height: 240px;
+  }
+  .main__top__first-view__catch-copy.english {
+    font-size: 8px;
+    left: 50%;
+    line-height: 20px;
+    top: 58%;
+    width: 260px;
+    z-index: 11;
   }
   .main__top__navs__item {
     font-size: 10px;
+    height: 60px;
   }
   .main__top__latest-answers__title {
     font-size: 20px;
