@@ -9,7 +9,162 @@
   height: 320px;
   display: grid;
   place-items: center;
+  position: relative;
   margin-bottom: 20px;
+}
+.main__top__first-view__catch-copy {
+  filter: drop-shadow(0 0 18px #efefef);
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 480px;
+  z-index: 10;
+}
+.main__top__first-view__text {
+  display: block;
+  font-family: "Koharuiro";
+  position: absolute;
+}
+.main__top__first-view .text--1 {
+  animation: slide 10s linear normal infinite;
+  opacity: 0.8;
+  transition: opacity 0.25s, animation-play-state 1s;
+  top: 5%;
+}
+.main__top__first-view .text--1:hover {
+  animation-play-state: paused;
+  opacity: 1;
+}
+.main__top__first-view .text--2 {
+  animation: slide 5s linear alternate-reverse infinite;
+  opacity: 0.8;
+  transition: opacity 0.25s, animation-play-state 1s;
+  top: 95%;
+}
+.main__top__first-view .text--2:hover {
+  animation-play-state: paused;
+  opacity: 1;
+}
+.main__top__first-view .text--3 {
+  animation: slide 12s ease-in reverse infinite;
+  opacity: 0.9;
+  transition: opacity 0.25s, animation-play-state 1s;
+  top: 10%;
+}
+.main__top__first-view .text--3:hover {
+  animation-play-state: paused;
+  opacity: 1;
+}
+.main__top__first-view .text--4 {
+  animation: slide 15s ease-in-out normal infinite;
+  opacity: 0.6;
+  transition: opacity 0.25s, animation-play-state 1s;
+  top: 85%;
+}
+.main__top__first-view .text--4:hover {
+  animation-play-state: paused;
+  opacity: 1;
+}
+.main__top__first-view .text--5 {
+  animation: slide 14s cubic-bezier(0.42, 0, 1, 1) normal infinite;
+  opacity: 0.4;
+  transition: opacity 0.25s, animation-play-state 1s;
+  top: 12%;
+}
+.main__top__first-view .text--5:hover {
+  animation-play-state: paused;
+  opacity: 1;
+}
+.main__top__first-view .text--6 {
+  animation: slide 8s cubic-bezier(0.42, 0, 0.58, 1) alternate infinite;
+  opacity: 0.2;
+  transition: opacity 0.25s, animation-play-state 1s;
+  top: 76%;
+}
+.main__top__first-view .text--6:hover {
+  animation-play-state: paused;
+  opacity: 1;
+}
+.main__top__first-view .text--7 {
+  animation: slide 10s cubic-bezier(0.1, 0.7, 1, 0.1) normal infinite;
+  opacity: 0.35;
+  transition: opacity 0.25s, animation-play-state 1s;
+  top: 65%;
+}
+.main__top__first-view .text--7:hover {
+  animation-play-state: paused;
+  opacity: 1;
+}
+.main__top__first-view .text--8 {
+  animation: slide 11s linear normal infinite;
+  opacity: 0.2;
+  transition: opacity 0.25s, animation-play-state 1s;
+  top: 50%;
+}
+.main__top__first-view .text--8:hover {
+  animation-play-state: paused;
+  opacity: 1;
+}
+.main__top__first-view .text--9 {
+  animation: slide 7s ease-in reverse infinite;
+  opacity: 0.9;
+  transition: opacity 0.25s, animation-play-state 1s;
+  top: 20%;
+}
+.main__top__first-view .text--9:hover {
+  animation-play-state: paused;
+  opacity: 1;
+}
+.main__top__first-view .text--10 {
+  animation: slide 8s cubic-bezier(0.1, -0.6, 0.2, 0) alternate infinite;
+  opacity: 0.45;
+  transition: opacity 0.25s, animation-play-state 1s;
+  top: 40%;
+}
+.main__top__first-view .text--10:hover {
+  animation-play-state: paused;
+  opacity: 1;
+}
+.main__top__first-view .text--11 {
+  animation: slide 11.5s ease-in-out normal infinite;
+  opacity: 0.65;
+  transition: opacity 0.25s, animation-play-state 1s;
+  top: 80%;
+}
+.main__top__first-view .text--11:hover {
+  animation-play-state: paused;
+  opacity: 1;
+}
+.main__top__first-view .text--12 {
+  animation: slide 9s linear reverse infinite;
+  opacity: 0.3;
+  transition: opacity 0.25s, animation-play-state 1s;
+  top: 33%;
+}
+.main__top__first-view .text--12:hover {
+  animation-play-state: paused;
+  opacity: 1;
+}
+.main__top__first-view .text--13 {
+  animation: slide 8.5s ease-in reverse infinite;
+  opacity: 0.58;
+  transition: opacity 0.25s, animation-play-state 1s;
+  top: 24%;
+}
+.main__top__first-view .text--13:hover {
+  animation-play-state: paused;
+  opacity: 1;
+}
+.main__top__first-view .text--14 {
+  animation: slide 6.5s ease-out normal infinite;
+  opacity: 0.7;
+  transition: opacity 0.25s, animation-play-state 1s;
+  top: 91%;
+}
+.main__top__first-view .text--14:hover {
+  animation-play-state: paused;
+  opacity: 1;
 }
 .main__top__navs {
   display: flex;
@@ -99,6 +254,14 @@
   }
   .main__top__latest-answers__title {
     font-size: 20px;
+  }
+}
+@keyframes slide {
+  from {
+    transform: translateX(-550%);
+  }
+  to {
+    transform: translateX(550%);
   }
 }
 
