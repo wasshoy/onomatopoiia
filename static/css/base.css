@@ -83,6 +83,7 @@ body {
 }
 .header__nav__list__item.user .user__user-menu.hidden {
   opacity: 0;
+  pointer-events: none;
 }
 .header__nav__list__item.user .user__user-menu .user-menu__item {
   background-color: #efefef55;
