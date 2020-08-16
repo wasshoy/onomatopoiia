@@ -3,10 +3,10 @@
 __pycache__/
 
 local_settings.py
-db.sqlite3
 
 *.pyc
 .sass-cache
+*.sqlite3
 *.css.map
 *.scss
 
